@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>grayscale</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <style type="text/css" media="all">
+    img{
+      width: 100px;
+      filter: grayscale(1);
+    }
+    img:hover{
+      filter: grayscale(0);
+      transition: 0.50s ease-in-out;
+    }
+    #kotak{
+      width: 200px;
+      height: 200px;
+      border: solid 1px black;
+      background: linear-gradient(to right ,blue,red,aqua);
+    }
+    p{
+      background: black;
+      color: white;
+      font-family: Times New Roman;
+      font-weight: bold;
+      overflow: auto;
+      
+      border: solid 2px aqua;
+      width: 200px;
+      height: 100px;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background: gray;
+    }
+    #btn{
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <img onclick="tampilan()" src="fb.png" alt="" />
+  <img src="ig.jpeg" alt="" />
+  <img src="yt.png" alt="" />
+  <div id="kotak">
+    
+  </div>
+  <p>HTML merupakan sesuatu yang berada di balik layar tampilan halaman web yang sehari-hari diakses oleh pengguna. Tanpa kehadiran HTML, tampilan web tentunya akan berantakan. Lalu, CSS dan HTML memiliki keterikatan satu sama lain. CSS merupakan kode-kode yang dipakai untuk mendesain laman HTML</p>
+  <span class="number">0</span>
+  <br />
+  <input type="range" name="" id="" value="0" />
+  <br />
+<input type="password" id="user">
+<br>
+<input type="checkbox" onclick="tampilan()">show
+  <br>
+  <br>
+  <br>
+  <button id="btn">tombol</button>
+  <br>
+  <div class="box"></div>
+  <script type="text/javascript" charset="utf-8">
+  
+  $(document).ready(function (){
+    $('#btn').click(function (){
+      $('.box').toggle()
+    })
+  })
+  
+  
+  
+    const input = document.querySelector("input")
+    const number = document.querySelector(".number")
+    input.addEventListener("input", () => {
+      number.textContent= input.value
+    })
+    
+    function tampilan(){
+      
+      var user = document.getElementById("user")
+      if(user.type === "password"){
+        user.type = "text"
+      }else{
+        user.type = "password"
+      }
+    }
+    
+    
+  </script>
+</body>
+</html>
